@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lanche da Praça — Delivery em Indaiatuba</title>
+<meta name="description" content="Delivery de hambúrguer, hot dog e pastel em Indaiatuba — Parque das Bandeiras, Fogueteiro, Helvétia e região. Todos os dias, 18h às 23h. Monte seu carrinho e peça pelo WhatsApp (19) 99549-6414.">
+<meta property="og:title" content="Lanche da Praça — Delivery em Indaiatuba">
+<meta property="og:description" content="Hambúrguer, hot dog, pastel, porções e bebidas. Monte seu pedido e envie pelo WhatsApp. Atendemos Parque das Bandeiras, Fogueteiro, Helvétia e região. 18h às 23h.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lanche da Praça — Delivery em Indaiatuba. Hambúrguer, Hot Dog, Pastel, Porções, Bebidas. (19) 99549-6414">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lanche da Praça — Delivery em Indaiatuba">
+<meta name="twitter:image" content="og-image.png">
+<meta name="twitter:image:alt" content="Lanche da Praça — Delivery em Indaiatuba. Hambúrguer, Hot Dog, Pastel, Porções, Bebidas. (19) 99549-6414">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FastFoodRestaurant",
+  "name": "Lanche da Praça",
+  "telephone": "+5519995496414",
+  "priceRange": "R$11 - R$35",
+  "servesCuisine": ["Hambúrguer", "Hot Dog", "Pastel"],
+  "areaServed": ["Parque das Bandeiras", "Fogueteiro", "Helvétia"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Indaiatuba",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "18:00",
+    "closes": "23:00"
+  },
+  "acceptsReservations": "False",
+  "paymentAccepted": ["Pix", "Dinheiro", "Cartão"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#12161f; --bg2:#0b0e14; --panel:#1a2030;
+    --red:#d62b34; --red-deep:#a91f27; --gold:#f3b704; --gold-soft:#f8d054;
+    --cream:#f6f1e4; --muted:#a7afc2; --line:#2a3247;
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *{box-sizing:inherit; margin:0; padding:0;}
+  html{scroll-padding-top: calc(64px + env(safe-area-inset-top,0px));}
+  html,body{background:var(--bg); color:var(--cream); font-family:'Work Sans',sans-serif;}
+  img,svg{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px;}
+  h1,h2,h3{font-family:'Anton',sans-serif; letter-spacing:.5px; line-height:1;}
+  button{font-family:inherit;}
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50; background:rgba(11,14,20,.92); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding-top: env(safe-area-inset-top,0px);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 20px; max-width:1080px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{width:34px; height:34px; border-radius:8px; background:linear-gradient(135deg,var(--gold),var(--red)); display:flex; align-items:center; justify-content:center; font-size:18px;}
+  .brand-name{font-family:'Anton',sans-serif; font-size:1.05rem; letter-spacing:.5px;}
+  .nav-cta{background:var(--red); color:#fff; text-decoration:none; font-weight:700; font-size:.85rem; padding:9px 16px; border-radius:24px; white-space:nowrap; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px;}
+  .nav-cta:active{transform:scale(.97);}
+  .nav-cta .badge{background:rgba(255,255,255,.25); border-radius:999px; padding:1px 7px; font-size:.78rem;}
+
+  /* HERO */
+  .hero{position:relative; padding:52px 0 40px; overflow:hidden; background:
+      radial-gradient(600px 300px at 85% -10%, rgba(214,43,52,.35), transparent 60%),
+      radial-gradient(500px 260px at -10% 110%, rgba(243,183,4,.18), transparent 60%);
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .kicker{color:var(--gold); font-weight:700; font-size:.85rem; letter-spacing:.06em;}
+  .hero h1{font-size:clamp(2.6rem,9vw,4.2rem); margin-top:8px; color:var(--cream);}
+  .hero h1 span{color:var(--gold);}
+  .hero p{color:var(--muted); font-size:1.05rem; margin-top:14px; max-width:46ch;}
+  .hero-actions{display:flex; gap:12px; margin-top:26px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-weight:700; padding:14px 22px; border-radius:10px; text-decoration:none; font-size:.98rem; border:none; cursor:pointer;}
+  .btn-primary{background:var(--red); color:#fff;}
+  .btn-primary:active{background:var(--red-deep);}
+  .btn-primary:disabled{opacity:.5; cursor:not-allowed;}
+  .btn-ghost{border:1.5px solid var(--line); color:var(--cream); background:transparent;}
+  .hero-strip{margin-top:36px; display:flex; gap:14px; overflow-x:auto; padding-bottom:6px;}
+  .chip{flex:0 0 auto; background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:9px 16px; font-size:.85rem; color:var(--muted); font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;}
+  .info-bar{margin-top:22px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px; font-size:.85rem; color:var(--muted);}
+  .info-bar strong{color:var(--cream);}
+
+  /* SECTION BANNER */
+  .cat{padding:34px 0 8px;}
+  .cat-banner{background:var(--red); border-radius:10px; padding:12px 20px; margin-bottom:22px; display:flex; align-items:baseline; justify-content:space-between; gap:12px;}
+  .cat-banner h2{color:#fff; font-size:clamp(1.4rem,4vw,1.9rem);}
+  .cat-banner .count{color:rgba(255,255,255,.75); font-size:.85rem; font-weight:600; font-family:'Work Sans',sans-serif;}
+
+  .item-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 20px;}
+  @media (max-width:640px){ .item-grid{grid-template-columns:1fr;} }
+  .item{padding:14px 0; border-bottom:1px solid var(--line); display:flex; gap:14px; align-items:flex-start; justify-content:space-between;}
+  .item-txt h3{font-family:'Work Sans',sans-serif; font-weight:700; font-size:1.02rem; color:var(--cream);}
+  .item-txt p{color:var(--muted); font-size:.88rem; margin-top:4px; line-height:1.4;}
+  .addon-toggle{margin-top:8px; background:none; border:none; color:var(--gold-soft); font-size:.8rem; font-weight:700; cursor:pointer; padding:6px 0; text-decoration:underline;}
+  .addon-panel{display:none; margin-top:4px; padding:10px 12px; background:var(--bg2); border:1px solid var(--line); border-radius:8px;}
+  .addon-panel.open{display:block;}
+  .addon-panel label{display:flex; align-items:center; gap:10px; font-size:.85rem; color:var(--muted); padding:6px 0; cursor:pointer;}
+  .addon-panel label span{color:var(--gold-soft); font-weight:700; margin-left:auto; white-space:nowrap;}
+  .addon-panel input{width:18px; height:18px; flex:0 0 auto; accent-color:var(--red);}
+  .item-side{flex:0 0 auto; display:flex; flex-direction:column; align-items:flex-end; gap:8px;}
+  .price{background:var(--gold); color:#241a00; font-weight:800; font-size:.9rem; padding:5px 10px; border-radius:6px; white-space:nowrap;}
+  .add-btn{background:var(--panel); border:1.5px solid var(--red); color:var(--cream); font-weight:700; font-size:.82rem; padding:6px 14px; border-radius:8px; cursor:pointer; white-space:nowrap;}
+  .add-btn:active{background:var(--red);}
+  .qty-ctrl{display:flex; align-items:center; gap:2px; background:var(--panel); border:1.5px solid var(--red); border-radius:10px; padding:0;}
+  .qty-ctrl button{background:none; border:none; color:var(--gold); font-size:1.1rem; font-weight:800; width:44px; height:44px; cursor:pointer; line-height:1;}
+  .qty-ctrl span{min-width:16px; text-align:center; font-weight:700; font-size:.9rem;}
+
+  .addons{margin-top:20px; background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 20px;}
+  .addons h3{font-family:'Anton',sans-serif; color:var(--gold-soft); font-size:1.1rem; margin-bottom:6px;}
+  .addons p.hint{color:var(--muted); font-size:.82rem; margin-bottom:10px;}
+  .addons-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:8px 16px;}
+  .addons-grid div{display:flex; justify-content:space-between; font-size:.9rem; color:var(--muted); border-bottom:1px dashed var(--line); padding:4px 0;}
+  .addons-grid strong{color:var(--cream); font-weight:600;}
+
+  .status{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:.85rem; padding:8px 14px; border-radius:999px; background:var(--panel); border:1px solid var(--line); color:var(--cream);}
+  .status .dot{width:8px; height:8px; border-radius:50%; background:#3ecf6b;}
+  .status.closed .dot{background:#e2574c;}
+  .status.closed{color:var(--muted);}
+  .icon{width:18px; height:18px; flex:0 0 auto; color:currentColor;}
+
+  /* FAQ */
+  .faq{padding:34px 0;}
+  .faq h2{font-size:clamp(1.4rem,4vw,1.9rem); margin-bottom:16px; color:var(--cream);}
+  .faq details{border-bottom:1px solid var(--line); padding:14px 0;}
+  .faq summary{cursor:pointer; font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--cream);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; color:var(--gold); font-size:1.3rem; font-weight:400; flex:0 0 auto;}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{color:var(--muted); margin-top:10px; font-size:.92rem; line-height:1.5;}
+
+  /* DELIVERY / FOOTER */
+  .cta-band{margin-top:56px; padding:44px 0; background:linear-gradient(135deg,var(--red-deep),var(--red)); text-align:center;}
+  .cta-band h2{color:#fff; font-size:clamp(1.6rem,6vw,2.4rem);}
+  .cta-band p{color:rgba(255,255,255,.85); margin-top:8px;}
+  .cta-band .btn-primary{background:#fff; color:var(--red-deep); margin-top:20px;}
+
+  footer{padding:26px 0 calc(26px + env(safe-area-inset-bottom,0px)); text-align:center; color:var(--muted); font-size:.82rem;}
+  footer a.wa-link{color:var(--gold-soft); text-decoration:underline;}
+
+  /* Floating cart button */
+  .float-cart{position:fixed; right:18px; bottom:calc(18px + env(safe-area-inset-bottom,0px)); z-index:60;
+    display:flex; align-items:center; gap:8px; background:var(--red); color:#fff; border:none;
+    border-radius:999px; padding:14px 20px; font-weight:800; font-size:.95rem; cursor:pointer;
+    box-shadow:0 8px 22px rgba(0,0,0,.4);}
+  .float-cart .badge{background:var(--gold); color:#241a00; border-radius:999px; padding:1px 8px; font-size:.85rem;}
+  .float-cart.hidden{display:none;}
+
+  /* Cart drawer */
+  .cart-overlay{position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:70; opacity:0; pointer-events:none; transition:opacity .2s;}
+  .cart-overlay.open{opacity:1; pointer-events:auto;}
+  .cart-drawer{position:fixed; top:0; right:0; height:100%; width:min(400px,100%); background:var(--bg2); z-index:71;
+    border-left:1px solid var(--line); display:flex; flex-direction:column; transform:translateX(100%); transition:transform .25s;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);}
+  .cart-drawer.open{transform:translateX(0);}
+  .cart-header{display:flex; align-items:center; justify-content:space-between; padding:18px 20px; border-bottom:1px solid var(--line);}
+  .cart-header h3{font-size:1.2rem;}
+  .cart-header button{background:none; border:none; color:var(--muted); font-size:1.4rem; cursor:pointer; width:44px; height:44px;}
+  .cart-items{flex:1; overflow-y:auto; padding:10px 20px;}
+  .cart-empty{color:var(--muted); text-align:center; padding:40px 10px; font-size:.92rem;}
+  .cart-line{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid var(--line);}
+  .cart-line-txt{flex:1;}
+  .cart-line-txt strong{display:block; font-size:.94rem;}
+  .cart-line-txt span{color:var(--muted); font-size:.82rem;}
+  .cart-footer{padding:16px 20px; border-top:1px solid var(--line); background:var(--panel);}
+  .cart-field{margin-bottom:12px;}
+  .cart-field label{display:block; font-size:.82rem; color:var(--muted); margin-bottom:5px;}
+  .cart-field input{width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--line); background:var(--bg2); color:var(--cream); font-size:.92rem;}
+  .cart-total{display:flex; justify-content:space-between; align-items:center; font-size:1.05rem; margin-bottom:6px;}
+  .cart-total strong{color:var(--gold-soft); font-size:1.2rem;}
+  .cart-note{color:var(--muted); font-size:.78rem; margin-bottom:14px;}
+  .cart-warning{color:var(--gold-soft); font-size:.85rem; font-weight:700; margin-bottom:10px; display:none;}
+  .cart-warning.show{display:block;}
+  .cart-checkout{width:100%; justify-content:center; text-align:center;}
+
+  @media (prefers-reduced-motion: no-preference){
+    .btn-primary:hover{filter:brightness(1.08);}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M4 10c0-3 3.5-5 8-5s8 2 8 5"/><path d="M3 12h18"/><path d="M3 15h18"/><path d="M4 18c0 1 1 2 2 2h12c1 0 2-1 2-2"/></svg>
+      </div>
+      <div class="brand-name">LANCHE DA PRAÇA</div>
+    </div>
+    <button class="nav-cta" id="navCartBtn">🛒 Carrinho <span class="badge" id="navBadge">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Delivery • <a href="tel:+5519995496414" style="color:inherit; text-decoration:underline;">(19) 99549-6414</a></div>
+    <h1>Hambúrguer, hot dog<br> e pastel <span>na hora.</span></h1>
+    <p>Cardápio completo da praça: hambúrgueres artesanais, hot dogs, pastéis fritos na hora, porções e bebidas geladas — direto na sua casa.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#cardapio">🛒 Montar meu pedido</a>
+      <a class="btn btn-ghost" id="heroWaLink" href="#" target="_blank" rel="noopener">📲 Falar no WhatsApp</a>
+    </div>
+    <div class="hero-strip">
+      <a class="chip" href="#hamburgueres"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 10c0-3 3.5-5 8-5s8 2 8 5"/><path d="M3 12h18"/><path d="M3 15h18"/><path d="M4 18c0 1 1 2 2 2h12c1 0 2-1 2-2"/></svg> Hambúrgueres</a>
+      <a class="chip" href="#hot-dog"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.7 0-3-1.3-3-3s1.3-3 3-3h14c1.7 0 3 1.3 3 3s-1.3 3-3 3H5z"/><path d="M6 12c1-1.5 2-1.5 3 0s2 1.5 3 0 2-1.5 3 0 2 1.5 3 0"/></svg> Hot Dogs</a>
+      <a class="chip" href="#pasteis"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M12 4 21 20H3z"/><path d="M6.5 17.5h11" stroke-dasharray="1.5 2.2"/></svg> Pastéis</a>
+      <a class="chip" href="#porcoes"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 10 5 21h14l-1-11z"/><path d="M9 10V5M12 10V3M15 10V5"/></svg> Porções</a>
+      <a class="chip" href="#bebidas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9h10l-1 12H8z"/><path d="M9 9 8 4h8l-1 5"/><path d="M13 4 15 1"/></svg> Bebidas</a>
+      <a class="chip" href="#faq">Dúvidas</a>
+    </div>
+    <div class="info-bar">
+      <span class="status" id="statusBadge"><span class="dot"></span><span id="statusText">Verificando horário…</span></span>
+      <span>📍 <strong>Entregamos em:</strong> Parque das Bandeiras, Fogueteiro, Helvétia e região</span>
+      <span>🕕 <strong>Todos os dias:</strong> 18h às 23h</span>
+      <span>🛵 <strong>Taxa de entrega</strong> calculada na hora</span>
+    </div>
+  </div>
+</section>
+
+<main id="cardapio" class="wrap"></main>
+
+<section class="faq wrap" id="faq">
+  <h2>Dúvidas rápidas</h2>
+  <details>
+    <summary>Qual o horário de entrega?</summary>
+    <p>Todos os dias, das 18h às 23h.</p>
+  </details>
+  <details>
+    <summary>Vocês entregam no meu bairro?</summary>
+    <p>Atendemos Parque das Bandeiras, Fogueteiro, Helvétia e região.</p>
+  </details>
+  <details>
+    <summary>Como é calculada a taxa de entrega?</summary>
+    <p>Calculada na hora, de acordo com a distância até o seu endereço.</p>
+  </details>
+  <details>
+    <summary>Quais formas de pagamento?</summary>
+    <p>Pix, dinheiro ou cartão na entrega.</p>
+  </details>
+  <details>
+    <summary>Como faço meu pedido?</summary>
+    <p>Escolha os itens no cardápio, adicione ao carrinho e finalize pelo WhatsApp — é só confirmar o bairro e enviar.</p>
+  </details>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Bateu a fome?</h2>
+    <p>Monte seu pedido e finalize pelo WhatsApp em segundos.</p>
+    <button class="btn btn-primary" id="bandCartBtn">🛒 Montar meu pedido</button>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Lanche da Praça · Indaiatuba (Parque das Bandeiras, Fogueteiro, Helvétia e região) · 18h às 23h · Pix, dinheiro e cartão · <a href="tel:+5519995496414" style="color:inherit;">(19) 99549-6414</a> · <a class="wa-link" id="footerWaLink" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+</footer>
+
+<button class="float-cart hidden" id="floatCart" aria-label="Abrir carrinho">
+  🛒 <span id="cartSubtotalMini">R$ 0,00</span> <span class="badge" id="floatBadge">0</span>
+</button>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de pedido">
+  <div class="cart-header">
+    <h3>Seu pedido</h3>
+    <button id="closeCart" aria-label="Fechar carrinho">✕</button>
+  </div>
+  <div class="cart-items" id="cartItemsBox"></div>
+  <div class="cart-footer">
+    <div class="cart-field">
+      <label for="bairroInput">Seu bairro (para calcular a entrega)</label>
+      <input type="text" id="bairroInput" placeholder="Ex: Parque das Bandeiras">
+    </div>
+    <div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div>
+    <p class="cart-note">A taxa de entrega é calculada na hora, direto no WhatsApp.</p>
+    <p class="cart-warning" id="cartWarning">Seu carrinho está vazio — escolha algo no cardápio antes de finalizar.</p>
+    <a class="btn btn-primary cart-checkout" id="checkoutBtn" href="#" target="_blank" rel="noopener">Finalizar pedido no WhatsApp</a>
+  </div>
+</aside>
+
+<script>
+const WA_NUMBER = "5519995496414";
+const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+// Selo "Aberto agora" / "Fechado" — 18h às 23h, todos os dias
+(function(){
+  const hour = new Date().getHours();
+  const open = hour >= 18 && hour < 23;
+  const badge = document.getElementById("statusBadge");
+  const text = document.getElementById("statusText");
+  if(!open){ badge.classList.add("closed"); }
+  text.textContent = open ? "Aberto agora" : "Fechado — abrimos às 18h";
+})();
+
+// Contato direto de fallback (sem itens)
+["heroWaLink","footerWaLink"].forEach(id=>{
+  document.getElementById(id).href = waLink("Olá! Vi o cardápio online e quero fazer um pedido 🍔\nBairro: ");
+});
+
+const CAT_ICONS = {
+  "Hambúrgueres": '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M4 10c0-3 3.5-5 8-5s8 2 8 5"/><path d="M3 12h18"/><path d="M3 15h18"/><path d="M4 18c0 1 1 2 2 2h12c1 0 2-1 2-2"/></svg>',
+  "Hot Dog": '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.7 0-3-1.3-3-3s1.3-3 3-3h14c1.7 0 3 1.3 3 3s-1.3 3-3 3H5z"/><path d="M6 12c1-1.5 2-1.5 3 0s2 1.5 3 0 2-1.5 3 0 2 1.5 3 0"/></svg>',
+  "Pastéis": '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M12 4 21 20H3z"/><path d="M6.5 17.5h11" stroke-dasharray="1.5 2.2"/></svg>',
+  "Porções": '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M6 10 5 21h14l-1-11z"/><path d="M9 10V5M12 10V3M15 10V5"/></svg>',
+  "Bebidas": '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9h10l-1 12H8z"/><path d="M9 9 8 4h8l-1 5"/><path d="M13 4 15 1"/></svg>',
+};
+
+const ADDONS = [
+  { id: "bacon", name: "Bacon", price: "4,00" },
+  { id: "catupiry", name: "Catupiry", price: "4,00" },
+  { id: "cheddar", name: "Cheddar", price: "4,00" },
+  { id: "hamburguer-extra", name: "Hambúrguer extra", price: "4,00" },
+];
+const addonsById = Object.fromEntries(ADDONS.map(a => [a.id, a]));
+
+const cardapio = [
+  {
+    title: "Hambúrgueres",
+    items: [
+      ["Hambúrguer Simples","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, alface, tomate, 1 hambúrguer","20,00"],
+      ["Hambúrguer Duplo","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, alface, tomate, bacon, calabresa, 2 hambúrgueres","22,00"],
+      ["X-Salada","Ketchup, maionese, mostarda, milho, mussarela, batata palha, alface, tomate, bacon, calabresa, 1 hambúrguer","21,00"],
+      ["X-Bacon","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, alface, tomate, bacon, 1 hambúrguer","24,00"],
+      ["X-Egg","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, alface, tomate, bacon, calabresa, ovo, 1 hambúrguer","23,00"],
+      ["X-Calabresa","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, alface, tomate, calabresa, 1 hambúrguer","23,00"],
+      ["X-Baci","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, 1 hambúrguer","24,00"],
+      ["X-Frango","Ketchup, maionese, mostarda, alface, tomate, bacon, calabresa, frango, presunto e queijo","23,00"],
+      ["X-Churrasco","Carne, alface, tomate, queijo, batata palha","30,00"],
+      ["X-Tudo","Ketchup, maionese, mostarda, milho, presunto, mussarela, batata palha, alface, tomate, bacon, calabresa, ovo, salsicha, frango, 1 hambúrguer","29,00"],
+      ["A Moda da Casa","Hambúrguer, carne, frango, bacon, calabresa, presunto e queijo, alface, tomate e batata palha","32,00"],
+    ]
+  },
+  {
+    title: "Hot Dog",
+    items: [
+      ["Hot Dog Simples","Ketchup, maionese, mostarda, 1 salsicha, vinagrete, purê, milho, batata palha, bacon e calabresa","11,00"],
+      ["Hot Dog Duplo","Ketchup, maionese, mostarda, 2 salsichas, vinagrete, purê, milho, batata palha, bacon e calabresa","12,00"],
+      ["Cachorro Simples Prensado","Ketchup, maionese, mostarda, presunto, mussarela, milho, batata palha, alface, tomate, bacon, calabresa, 1 salsicha","17,00"],
+      ["Cachorro Duplo Prensado","Ketchup, maionese, mostarda, presunto, mussarela, milho, batata palha, alface, tomate, bacon, calabresa, 2 salsichas","18,00"],
+      ["Hot Dog no Prato","Ketchup, maionese, mostarda, 2 salsichas, vinagrete, purê, milho, batata palha, bacon e calabresa","15,00"],
+    ]
+  },
+  {
+    title: "Pastéis",
+    items: [
+      ["Pastel de Carne","Carne","11,00"],
+      ["Pastel de Queijo","Queijo","11,00"],
+      ["Pastel de Frango","Frango","11,00"],
+      ["Pastel de Frango com Catupiry","Frango e catupiry","12,00"],
+      ["Pastel de Carne com Queijo","Carne e queijo","12,00"],
+      ["Pastel de Pizza","Presunto, queijo e tomate","12,00"],
+      ["Pastel de Calabresa com Queijo","Calabresa e queijo","12,00"],
+      ["Pastel de Palmito","Palmito","12,00"],
+      ["Pastel de Bacon com Queijo","Bacon e queijo","12,00"],
+      ["Pastel de Milho com Queijo","Milho e queijo","12,00"],
+      ["Pastel de Chocolate","Chocolate","12,00"],
+      ["Pastel de Banana com Canela","Banana e canela","12,00"],
+    ]
+  },
+  {
+    title: "Porções",
+    items: [
+      ["Batata Frita Simples","Porção de batata frita crocante","24,00"],
+      ["Batata Frita Completa","Batata, bacon e queijo","35,00"],
+    ]
+  },
+  {
+    title: "Bebidas",
+    items: [
+      ["Refrigerante Lata","350ml — Coca-Cola, Guaraná e similares","7,00"],
+      ["Refrigerante 600ml","Garrafa 600ml","10,00"],
+      ["Cerveja","A partir de","6,00"],
+    ]
+  },
+];
+
+function slug(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,'-'); }
+
+// Monta o índice de itens (id -> {name, price}) e renderiza o cardápio
+const itemsById = {};
+const main = document.getElementById("cardapio");
+main.innerHTML = cardapio.map(cat => `
+  <section class="cat" id="${slug(cat.title)}">
+    <div class="cat-banner">
+      <h2 style="display:flex; align-items:center; gap:10px;">${CAT_ICONS[cat.title] || ""}${cat.title}</h2>
+      <span class="count">${cat.items.length} opções</span>
+    </div>
+    <div class="item-grid">
+      ${cat.items.map(([name,desc,price],idx) => {
+        const id = `${slug(cat.title)}-${idx}`;
+        itemsById[id] = { name, price };
+        return `
+        <div class="item" data-id="${id}">
+          <div class="item-txt">
+            <h3>${name}</h3>
+            <p>${desc}</p>
+            <button class="addon-toggle" data-addon-toggle="${id}" type="button">+ Personalizar</button>
+            <div class="addon-panel" id="addon-${id}">
+              ${ADDONS.map(a => `
+                <label>
+                  <input type="checkbox" data-addon-check="${id}" value="${a.id}">
+                  ${a.name} <span>+R$ ${a.price}</span>
+                </label>
+              `).join("")}
+            </div>
+          </div>
+          <div class="item-side">
+            <div class="price">R$ ${price}</div>
+            <div class="qty-ctrl" id="qty-${id}"></div>
+          </div>
+        </div>
+      `}).join("")}
+    </div>
+  </section>
+`).join("") + `
+  <div class="addons" style="margin-top:8px;">
+    <h3>Adicionais</h3>
+    <p class="hint">Toque em "+ Personalizar" em qualquer item do cardápio para incluir um destes adicionais nele.</p>
+    <div class="addons-grid">
+      <div><strong>Bacon</strong> R$ 4,00</div>
+      <div><strong>Catupiry</strong> R$ 4,00</div>
+      <div><strong>Cheddar</strong> R$ 4,00</div>
+      <div><strong>Hambúrguer extra</strong> R$ 4,00</div>
+    </div>
+  </div>
+`;
+
+// ---------- CARRINHO ----------
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem("lanchePracaCart") || "{}"); } catch(e){ cart = {}; }
+
+function saveCart(){
+  try { localStorage.setItem("lanchePracaCart", JSON.stringify(cart)); } catch(e){}
+}
+
+function priceToNumber(price){ return parseFloat(price.replace(",", ".")); }
+
+function parseLineKey(key){
+  const [itemId, addonsStr] = key.split("::");
+  const addonIds = addonsStr ? addonsStr.split(",") : [];
+  return { itemId, addonIds };
+}
+
+function buildLineKey(itemId, addonIds){
+  if(!addonIds.length) return itemId;
+  return `${itemId}::${addonIds.slice().sort().join(",")}`;
+}
+
+function getSelectedAddons(itemId){
+  const panel = document.getElementById(`addon-${itemId}`);
+  if(!panel) return [];
+  return Array.from(panel.querySelectorAll(`input[data-addon-check="${itemId}"]:checked`)).map(cb => cb.value);
+}
+
+function lineUnitPrice(itemId, addonIds){
+  const item = itemsById[itemId];
+  if(!item) return 0;
+  let total = priceToNumber(item.price);
+  addonIds.forEach(aid => {
+    const addon = addonsById[aid];
+    if(addon) total += priceToNumber(addon.price);
+  });
+  return total;
+}
+
+function lineLabel(itemId, addonIds){
+  const item = itemsById[itemId];
+  if(!item) return "";
+  if(!addonIds.length) return item.name;
+  const addonNames = addonIds.map(aid => addonsById[aid] && addonsById[aid].name).filter(Boolean);
+  return addonNames.length ? `${item.name} + ${addonNames.join(", ")}` : item.name;
+}
+
+function cartCount(){
+  return Object.values(cart).reduce((a,b)=>a+b, 0);
+}
+
+function cartTotal(){
+  let total = 0;
+  for(const key in cart){
+    const { itemId, addonIds } = parseLineKey(key);
+    total += lineUnitPrice(itemId, addonIds) * cart[key];
+  }
+  return total;
+}
+
+function formatBRL(n){
+  return "R$ " + n.toFixed(2).replace(".", ",");
+}
+
+function addToCart(itemId){
+  const addonIds = getSelectedAddons(itemId);
+  const key = buildLineKey(itemId, addonIds);
+  cart[key] = (cart[key] || 0) + 1;
+  saveCart();
+  const panel = document.getElementById(`addon-${itemId}`);
+  if(panel){
+    panel.querySelectorAll("input").forEach(cb => { cb.checked = false; });
+    panel.classList.remove("open");
+  }
+  renderCart();
+}
+
+function changeQty(key, delta){
+  cart[key] = (cart[key] || 0) + delta;
+  if(cart[key] <= 0) delete cart[key];
+  saveCart();
+  renderCart();
+}
+
+function renderQtyControls(){
+  for(const itemId in itemsById){
+    const box = document.getElementById(`qty-${itemId}`);
+    if(!box) continue;
+    const addonIds = getSelectedAddons(itemId);
+    const key = buildLineKey(itemId, addonIds);
+    const qty = cart[key] || 0;
+    if(qty === 0){
+      box.innerHTML = `<button class="add-btn" data-add="${itemId}">+ Adicionar</button>`;
+    } else {
+      box.innerHTML = `
+        <div class="qty-ctrl">
+          <button data-dec="${key}">−</button>
+          <span>${qty}</span>
+          <button data-inc="${key}">+</button>
+        </div>`;
+    }
+  }
+}
+
+function renderCartDrawer(){
+  const box = document.getElementById("cartItemsBox");
+  const keys = Object.keys(cart);
+  if(keys.length === 0){
+    box.innerHTML = `<div class="cart-empty">Seu carrinho está vazio.<br>Escolha algo gostoso no cardápio 🍔</div>`;
+  } else {
+    box.innerHTML = keys.map(key => {
+      const { itemId, addonIds } = parseLineKey(key);
+      const item = itemsById[itemId];
+      if(!item) return "";
+      const qty = cart[key];
+      const unit = lineUnitPrice(itemId, addonIds);
+      const lineTotal = unit * qty;
+      return `
+        <div class="cart-line">
+          <div class="cart-line-txt">
+            <strong>${lineLabel(itemId, addonIds)}</strong>
+            <span>${qty} × ${formatBRL(unit)} = ${formatBRL(lineTotal)}</span>
+          </div>
+          <div class="qty-ctrl">
+            <button data-dec="${key}">−</button>
+            <span>${qty}</span>
+            <button data-inc="${key}">+</button>
+          </div>
+        </div>`;
+    }).join("");
+  }
+  document.getElementById("cartSubtotal").textContent = formatBRL(cartTotal());
+}
+
+function buildCheckoutMessage(){
+  const keys = Object.keys(cart);
+  const bairro = document.getElementById("bairroInput").value.trim();
+  let msg = "Olá! Quero fazer um pedido no Lanche da Praça 🍔\n\n";
+  if(keys.length === 0){
+    msg += "(carrinho vazio — ainda vou escolher os itens)\n\n";
+  } else {
+    keys.forEach(key => {
+      const { itemId, addonIds } = parseLineKey(key);
+      const item = itemsById[itemId];
+      if(!item) return;
+      const qty = cart[key];
+      const unit = lineUnitPrice(itemId, addonIds);
+      msg += `• ${qty}x ${lineLabel(itemId, addonIds)} — ${formatBRL(unit)} (${formatBRL(unit*qty)})\n`;
+    });
+    msg += `\nSubtotal: ${formatBRL(cartTotal())}\n`;
+  }
+  msg += `Bairro: ${bairro || "________"}\n`;
+  msg += "Taxa de entrega: a combinar\n";
+  return msg;
+}
+
+function updateCheckoutLink(){
+  document.getElementById("checkoutBtn").href = waLink(buildCheckoutMessage());
+}
+
+function renderCart(){
+  renderQtyControls();
+  renderCartDrawer();
+  updateCheckoutLink();
+  const count = cartCount();
+  const total = cartTotal();
+  document.getElementById("navBadge").textContent = count;
+  document.getElementById("floatBadge").textContent = count;
+  document.getElementById("cartSubtotalMini").textContent = formatBRL(total);
+  const floatBtn = document.getElementById("floatCart");
+  floatBtn.classList.toggle("hidden", count === 0);
+  if(count > 0){ document.getElementById("cartWarning").classList.remove("show"); }
+}
+
+// Delegação de eventos para os botões de +/- do cardápio e do carrinho
+document.addEventListener("click", (e)=>{
+  const add = e.target.closest("[data-add]");
+  const inc = e.target.closest("[data-inc]");
+  const dec = e.target.closest("[data-dec]");
+  const toggle = e.target.closest("[data-addon-toggle]");
+  if(add){ addToCart(add.dataset.add); }
+  if(inc){ changeQty(inc.dataset.inc, 1); }
+  if(dec){ changeQty(dec.dataset.dec, -1); }
+  if(toggle){
+    const panel = document.getElementById(`addon-${toggle.dataset.addonToggle}`);
+    if(panel) panel.classList.toggle("open");
+  }
+});
+
+document.addEventListener("change", (e)=>{
+  if(e.target.matches("[data-addon-check]")){
+    renderQtyControls();
+  }
+});
+
+document.getElementById("bairroInput").addEventListener("input", updateCheckoutLink);
+
+// Abrir/fechar carrinho
+function openCart(){
+  document.getElementById("cartDrawer").classList.add("open");
+  document.getElementById("cartOverlay").classList.add("open");
+}
+function closeCart(){
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.getElementById("cartOverlay").classList.remove("open");
+}
+document.getElementById("navCartBtn").addEventListener("click", openCart);
+document.getElementById("bandCartBtn").addEventListener("click", openCart);
+document.getElementById("floatCart").addEventListener("click", openCart);
+document.getElementById("closeCart").addEventListener("click", closeCart);
+document.getElementById("cartOverlay").addEventListener("click", closeCart);
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "Escape" && document.getElementById("cartDrawer").classList.contains("open")){
+    closeCart();
+  }
+});
+
+// Impede finalizar com o carrinho vazio; mostra aviso em vez de abrir o WhatsApp
+document.getElementById("checkoutBtn").addEventListener("click", (e)=>{
+  const warning = document.getElementById("cartWarning");
+  if(cartCount() === 0){
+    e.preventDefault();
+    warning.classList.add("show");
+  } else {
+    warning.classList.remove("show");
+  }
+});
+
+renderCart();
+</script>
+</body>
+</html>
